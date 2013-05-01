@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+        <style type='text/css'>
+        	body { max-width: 978px; margin: 15px auto; }
+	    	#output { margin-left: 35px; width: 35px; margin-top: 0px; vertical-align: top; }
+	    	#output img { height: 45px; width: 45px; vertical-align: top; }
+	    	#error { color: red; font-weight: bold; padding-left: 15px; }
+	    	.alert { margin-top: 15px; display: none; }
+	    	.form-horizontal .controls { position:relative; top:5px; }​
+    	</style>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+            <div class="container">
+            	<div id="pattern">
+            		<h1>Look Outside!</h1>
+            	</div>
+            </div>
+
+        <form id="weather" action="#" class="form-search">
+          <input type="text" id="zip" placeholder="What's your zip code?"
+            class="input-medium search-query">
+          <button id="search" type="submit" class="btn">Fingers crossed!</button>
+          <div class="alert alert-error"></div>
+        </form>
+        
+        <div class="clear"></div>
+   
+        <table id="output" class="table span12">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+	
+		<script type="text/template" id="forecast-template">
+			<!-- this calls icon from WU 
+			
+			<img src="<%= icon_url %>" alt="" /> 
+			
+			-->	
+			
+			</th>
+			<td><img src="img/<%= icon %>.gif" alt=""></td>
+			<td><%= temp %></td>
+			<td><%= city %></td>
+			<td><%= state %></td>
+			<td><%= zip %></td>
+			<td><a href="#"><i class="delete icon-remove"></i></a>
+			</td>
+		</script>
+		
+     <div id="github">   
+		<a href="https://github.com/benkutil-class/awd-backbone-weather">View this on GitHub</a>
+	</div>
+	
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        
+        <!-- when using Backbone must include these two scripts. Cloudflare must be first. -->
+
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+        <script src="js/plugins.js"></script>
+        <!-- <script src="js/main.js"></script> jQuery Version -->
+        <script src="js/bb.js"></script>
+    </body>
+</html>
